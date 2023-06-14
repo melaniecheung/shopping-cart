@@ -15,5 +15,5 @@
 ## Screenshots
 
 <img width="1512" alt="Screenshot 2023-06-13 at 6 09 02 PM" src="https://github.com/melaniecheung/shopping-cart/assets/73202867/5a4186c9-ee07-4370-9175-30882e1cc8de">
-<img width="1512" alt="Screenshot 2023-06-13 at 6 09 14 PM" src="https://github.com/melaniecheung/shopping-cart/assets/73202867/1118e382-da9a-43ca-ad60-a6293ed35259">
+<img width="1512" alt="Screenshot 2023-06-13 at 6 11 13 PM" src="https://github.com/melaniecheung/shopping-cart/assets/73202867/232c4d6d-0645-44a2-9675-b11c9d63555e">
 <img width="1512" alt="Screenshot 2023-06-13 at 6 09 24 PM" src="https://github.com/melaniecheung/shopping-cart/assets/73202867/c52062c2-15f3-46f7-a921-cbe1e83e8cef">
