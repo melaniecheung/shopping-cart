@@ -12,10 +12,10 @@ const Navbar = () => {
 
       <div className='flex flex-grow justify-center'>
         <ul className='flex'>
-          <NavLink to='/products'>
+          <NavLink to='/shopping-cart/products'>
             <li className='p-4 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>Products</li>
           </NavLink>
-          <NavLink to='/about'>
+          <NavLink to='/shopping-cart/about'>
             <li className='p-4 mr-20 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>About</li>
           </NavLink>
         </ul>

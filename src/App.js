@@ -13,8 +13,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/shopping-cart' element={<HomePage />} />
-          <Route path='/products' element={<ProductPage />} />
-          <Route path='/about' element={<AboutPage />}/>
+          <Route path='/shopping-cart/products' element={<ProductPage />} />
+          <Route path='/shopping-cart/about' element={<AboutPage />}/>
         </Routes>
       </Router>
     </div>
