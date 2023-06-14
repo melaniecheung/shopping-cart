@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='bg-[#F8F8F8] flex items-center h-16 mx-auto px-8 text-black top-0'>
       <div>
-        <NavLink to='/'>
+        <NavLink to='/shopping-cart'>
           <h1 className='text-2xl font-bold hover:cursor-pointer hover:text-[#8F00FF] transition'>Store</h1>
         </NavLink>
       </div>
