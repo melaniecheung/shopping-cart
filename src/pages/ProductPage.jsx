@@ -7,7 +7,7 @@ const Productpage = () => {
       <ProductList />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Productpage

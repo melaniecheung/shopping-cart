@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
-import { useState, useEffect } from 'react';
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { useState } from 'react';
 import { RiShoppingCartLine } from 'react-icons/ri';
-import Navbar from './Navbar';
 import { CartContext } from './CartContext';
 import CartCard from './CartCard';
 import { IoArrowForward } from 'react-icons/io5';

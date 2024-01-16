@@ -10,16 +10,17 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      <div className='flex flex-grow justify-center'>
+      <div className='flex-grow flex justify-center'>
         <ul className='flex'>
-          <NavLink to='/shopping-cart/products'>
-            <li className='p-4 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>Products</li>
-          </NavLink>
-          <NavLink to='/shopping-cart/about'>
-            <li className='p-4 mr-20 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>About</li>
-          </NavLink>
+          <li className='p-4 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>
+            <NavLink to='/shopping-cart/products'>Products</NavLink>
+          </li>
+          <li className='p-4 hover:cursor-pointer font-semibold hover:text-[#8F00FF] transition'>
+            <NavLink to='/shopping-cart/about'>About</NavLink>
+          </li>
         </ul>
       </div>
+
     </div>
   );
 };
