@@ -1,5 +1,7 @@
 import ProductList from '../components/ProductList';
 import Footer from '../components/Footer';
+import { CartContext } from '../components/CartContext';
+import React, { useContext } from 'react'
 
 const Productpage = () => {
   return (

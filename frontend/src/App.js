@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 import SignInButton from './components/SignInButton';
 import SignInPage from './pages/SignInPage';
+import CartPage from './pages/CartPage';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path='/shopping-cart/products' element={<ProductPage />} />
           <Route path='/shopping-cart/about' element={<AboutPage />}/>
           <Route path='/shopping-cart/signin' element={<SignInPage />}/>
+          <Route path='/shopping-cart/cart' element={<CartPage />}/>
         </Routes>
       </Router>
     </div>

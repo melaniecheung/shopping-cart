@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Cart from './Cart';
+import { RiShoppingCartLine } from 'react-icons/ri';
 
 const Navbar = () => {
   return (
@@ -30,7 +31,9 @@ const Navbar = () => {
           <NavLink to='/shopping-cart/signin'>Sign In</NavLink>
         </li>}
         <li>
-          <Cart />
+          <NavLink to='/shopping-cart/cart'>
+            <RiShoppingCartLine className='hover:text-[#8F00FF] text-2xl'/>
+          </NavLink>
         </li>
       </ul>
     </div>

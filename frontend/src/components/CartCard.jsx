@@ -5,7 +5,7 @@ import { useContext } from 'react';
 const CartCard = ({ item }) => {
     const { removeFromCart, increaseAmount, decreaseAmount } = useContext(CartContext);
 
-    const {id, title, image, price, amount} = item;
+    const {id, name, image, new_price, amount} = item;
 
     return <div className="flex">
         <div className="py-2 lg:px-6 border-b border-gray-200 w-full font-light min-h-[150px] flex items-center">
@@ -17,7 +17,7 @@ const CartCard = ({ item }) => {
             <div className='w-full flex flex-col'> 
                 <div className='flex justify-between mb-2'>
                     <div>
-                        {title}
+                        {name}
                     </div>
                     {/* remove item */}
                     <div onClick={() => removeFromCart(id)} className='text-xl hover:cursor-pointer'>
@@ -37,7 +37,7 @@ const CartCard = ({ item }) => {
                         </div>
                     </div>
                     {/* item price */}
-                    <div className='flex-1 flex justify-end'>${parseFloat(price).toFixed(2)}</div>
+                    <div className='flex-1 flex justify-end'>${parseFloat(new_price).toFixed(2)}</div>
                 </div>
             </div>
         </div>

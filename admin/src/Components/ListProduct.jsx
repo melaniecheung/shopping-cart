@@ -1,65 +1,5 @@
-// import React, { useState, useEffect } from 'react'
-// import cross_icon from '/Users/melaniecheung/Desktop/shopping-cart/admin/src/assets/cross_icon.png'
-
-// const ListProduct = () => {
-//     const [allProducts, setAllProducts] = useState([]);
-
-//     const fetchInfo = async () => {
-//         await fetch('http://localhost:4000/allproducts')
-//         .then((res) => res.json())
-//         .then((data) => {setAllProducts(data)});
-//     }
-
-//     useEffect(() => {
-//         fetchInfo();
-//     }, [])
-
-//     const remove_product = async(id) => {
-//         await fetch('http://localhost:4000/removeproduct', {
-//             method: 'POST',
-//             headers: {
-//                 Accept: 'application/json',
-//                 'Content-Type': 'application/json',
-//             },
-//             body:JSON.stringify({id:id})
-//         })
-//         await fetchInfo();
-//     }
-
-//   return (
-//     <div className='list-product'>
-//         <h1>All Products List</h1>
-//         <div className="listproduct-format-main">
-//             <p>Products</p>
-//             <p>Title</p>
-//             <p>Old Price</p>
-//             <p>New Price</p>
-//             <p>Category</p>
-//             <p>Remove</p>
-//         </div>
-//         <div className="listproduct-allproducts">
-//             <hr />
-//             {allProducts.map((product, index) => {
-//                 return <>
-//                 <div key={index} className="listproduct-format-main listproduct-format">
-//                     <img className="listproduct-product-icon" src={product.image} alt="" />
-//                     <p>${product.old_price}</p>
-//                     <p>${product.new_price}</p>
-//                     <p>{product.category}</p>
-//                     <img className="listproduct-remove-icon" onClick={() => {remove_product(product.id)}} src={cross_icon} alt="" />
-//                 </div>
-//                 <hr />
-//                 </>
-//             })}
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default ListProduct
-
 import React, { useEffect, useState } from "react";
-import cross_icon from '../Assets/cross_icon.png'
+import { PiTrash } from "react-icons/pi";
 
 const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
@@ -90,37 +30,39 @@ const ListProduct = () => {
 
     }
 
-  return (
-    <div className="listproduct">
-      <h1>All Products List</h1>
-      <div className="listproduct-format-main">
-          <p>Products</p>
-          <p>Title</p>
-          <p>Old Price</p>
-          <p>New Price</p>
-          <p>Category</p>
-          <p>Remove</p>
+    return (
+      <div className="p-4 sm:ml-64">
+        <div className='container mx-auto'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[3rem] max-w-sm mx-auto md:max-w-none'>
+            {allproducts.map((e) => {
+              return (
+                <div key={e.id} className='bg-white flex flex-col justify-between border border-[#e4e4e4] rounded-md'>
+                  <div className='border-b border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition'>
+                    <div className='w-full h-full flex justify-center items-center'>
+                      <img className='max-h-[300px]' src={e.image} alt=''/>
+                    </div>
+                  </div>
+    
+                  <div className='flex justify-between items-center px-5'>
+                    <p className='font-semibold'>{e.name}</p>
+                    <PiTrash className="text-gray-500 transition hover:text-black text-xl hover:cursor-pointer" onClick={()=>{removeProduct(e.id)}} alt="" />
+                  </div>
+
+                  <div className='px-5 text-sm font-semibold capitalize text-gray-500 mt-1'>{e.category}</div>
+                  
+                  <div className='px-5 py-2 mb-2'>
+                    <p>${e.new_price}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      <div className="listproduct-allproducts">
-        <hr />
-        {allproducts.map((e) => {
-          return (
-            <>
-              <div className="listproduct-format-main listproduct-format">
-                <img className="listproduct-product-icon" src={e.image} alt="" />
-                <p cartitems-product-title>{e.name}</p>
-                <p>${e.old_price}</p>
-                <p>${e.new_price}</p>
-                <p>{e.category}</p>
-                <img className="listproduct-remove-icon" onClick={()=>{removeProduct(e.id)}} src={cross_icon} alt="" />
-              </div>
-              <hr />
-            </>
-          );
-        })}
       </div>
-    </div>
-  );
+    );
+    
+
+
 };
 
 export default ListProduct;

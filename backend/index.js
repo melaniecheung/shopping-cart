@@ -203,3 +203,58 @@ app.listen(port, (error) => {
         console.log("Error: " + error)
     }
 })
+
+// middleware to fetech user
+const fetchUser = async (req, res, next) => {
+  const token = req.header("auth-token");
+  if (!token) {
+    res.status(401).send({ errors: "Please authenticate using a valid token" });
+  }
+  try {
+    const data = jwt.verify(token, "secret_ecom");
+    req.user = data.user;
+    next();
+  } catch (error) {
+    res.status(401).send({ errors: "Please authenticate using a valid token" });
+  }
+}
+
+// endpoint for adding products in cartdata
+app.post("/addtocart", fetchUser, async (req, res) => {
+  console.log("Added to cart", req.body.itemId)
+  let userData = await Users.findOne({_id:req.user.id});
+  userData.cartData[req.body.itemId] += 1
+  await Users.findOneAndUpdate({_id: req.user.id}, {cartData: userData.cartData})
+  res.send("Added")
+})
+
+// endpoint for removing products from cartdata
+app.post('/removefromcart', fetchUser, async (req, res) => {
+	console.log("Remove Cart");
+    let userData = await Users.findOne({_id:req.user.id});
+    if(userData.cartData[req.body.itemId]!=0)
+    {
+      userData.cartData[req.body.itemId] -= 1;
+    }
+    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    res.send("Removed");
+  })
+
+  // endpoint for removing all products from cartdata
+app.post('/removeallfromcart', fetchUser, async (req, res) => {
+	console.log("Removed all from cart");
+    let userData = await Users.findOne({_id:req.user.id});
+    if(userData.cartData[req.body.itemId]!=0)
+    {
+      userData.cartData[req.body.itemId] = 0;
+    }
+    await Users.findOneAndUpdate({_id:req.user.id}, {cartData:userData.cartData});
+    res.send("Removed all from cart");
+  })
+
+// endpoint for saving products in cart
+app.post("/getcart", fetchUser, async (req, res) => {
+  console.log("Get Cart");
+  let userData = await Users.findOne({_id:req.user.id});
+  res.json(userData.cartData);
+})

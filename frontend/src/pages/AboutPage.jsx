@@ -13,7 +13,6 @@ const AboutPage = () => {
           <h3 className='mt-5 text-xl font-semibold'>Opening Hours:</h3>
           <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
           <p>Saturday: 8:00 AM - 11:00 PM</p>
-          <p className='mt-5 font-style: italic'>Built with Fake Store API</p>
         </div>
         <div className='flex-1 mx-10 mt-5'>
           <Maps />
