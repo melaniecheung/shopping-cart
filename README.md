@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # e-commerce
 =======
 # Shopping Cart
