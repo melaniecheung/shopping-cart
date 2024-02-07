@@ -1,9 +1,5 @@
 # Shopping Cart
 
-## Demo
-
-[Live Demo](http://melaniecheung.github.io/shopping-cart)
-
 ## Built With
 
 - React
