@@ -1,5 +1,3 @@
-# e-commerce
-=======
 # Shopping Cart
 
 ## Demo
@@ -12,7 +10,6 @@
 - Tailwind CSS
 - React Router
 - Figma
-- [Fake Store API](https://fakestoreapi.com/)
 
 ## Screenshots
 
