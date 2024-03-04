@@ -25,6 +25,7 @@ cd shopping-cart
 ```
 
 ### Backend Setup
+
 ```
 cd backend
 npm install
@@ -33,8 +34,6 @@ node index.js
 The backend should now be running on `http://localhost:4000`
 
 ### Frontend Setup
-
-Open a new terminal window or tab, and navigate to the frontend directory and install dependencies:
 
 ```
 cd frontend
