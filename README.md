@@ -15,6 +15,42 @@ Fullstack e-commerce website
 - MongoDB
 - Tailwind CSS
 
+## How to Run
+Installation
+
+```
+git clone https://github.com/melaniecheung/shopping-cart.git
+cd shopping-cart
+```
+
+Backend Setup
+```
+cd backend
+npm install
+node index.js
+```
+The backend should now be running on `http://localhost:4000`
+
+Frontend Setup
+Open a new terminal window or tab, and navigate to the frontend directory and install dependencies:
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Admin Panel Setup
+Open another terminal window or tab. From the root directory, navigate to the admin panel directory and install dependencies:
+
+```
+cd admin
+npm install
+npm run dev
+```
+
+After starting both the backend, frontend, and admin panel, you can now use the application by visiting the frontend and admin URLs in your browser. The backend will serve the API requests from both the frontend and the admin panel.
+
 ## Screenshots
 
 <img width="1512" alt="Screenshot 2023-06-13 at 6 09 02 PM" src="https://github.com/melaniecheung/shopping-cart/assets/73202867/5a4186c9-ee07-4370-9175-30882e1cc8de">
