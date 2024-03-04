@@ -1,11 +1,19 @@
 # Shopping Cart
 
+Fullstack e-commerce website
+
+## Features
+
+- User authentication
+- Admin functionality to add and remove products
+
 ## Built With
 
 - React
+- Node.js
+- Express.js
+- MongoDB
 - Tailwind CSS
-- React Router
-- Figma
 
 ## Screenshots
 
