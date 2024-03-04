@@ -16,8 +16,9 @@ Fullstack e-commerce website
 - Tailwind CSS
 
 ## How to Run
-### Installation
 
+### Installation
+First, clone the repository to your local machine:
 ```
 git clone https://github.com/melaniecheung/shopping-cart.git
 cd shopping-cart
@@ -31,7 +32,8 @@ node index.js
 ```
 The backend should now be running on `http://localhost:4000`
 
-Frontend Setup
+### Frontend Setup
+
 Open a new terminal window or tab, and navigate to the frontend directory and install dependencies:
 
 ```
@@ -40,7 +42,8 @@ npm install
 npm run dev
 ```
 
-Admin Panel Setup
+### Admin Panel Setup
+
 Open another terminal window or tab. From the root directory, navigate to the admin panel directory and install dependencies:
 
 ```
