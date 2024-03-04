@@ -43,8 +43,6 @@ npm run dev
 
 ### Admin Panel Setup
 
-Open another terminal window or tab. From the root directory, navigate to the admin panel directory and install dependencies:
-
 ```
 cd admin
 npm install
