@@ -16,14 +16,14 @@ Fullstack e-commerce website
 - Tailwind CSS
 
 ## How to Run
-Installation
+### Installation
 
 ```
 git clone https://github.com/melaniecheung/shopping-cart.git
 cd shopping-cart
 ```
 
-Backend Setup
+### Backend Setup
 ```
 cd backend
 npm install
