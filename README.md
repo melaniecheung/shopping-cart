@@ -2,11 +2,6 @@
 
 Fullstack e-commerce website
 
-## Features
-
-- User authentication
-- Admin functionality to add and remove products
-
 ## Built With
 
 - React
@@ -14,6 +9,11 @@ Fullstack e-commerce website
 - Express.js
 - MongoDB
 - Tailwind CSS
+
+## Features
+
+- User authentication
+- Admin functionality to add and remove products
 
 ## How to Run
 
